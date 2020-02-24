@@ -25,8 +25,8 @@ const Router = () => (
     <Route path="/register">
       <RegisterPage />
     </Route>
-    <PrivateRoute path="/protected">
-      <ProtectedPage />
+    <PrivateRoute path="/feed">
+      <RssListPage />
     </PrivateRoute>
     <Route path="*">
       <NoMatch />

@@ -1,24 +1,24 @@
 const reducer = (state, action) => {
   switch (action.type) {
-    case "SET_USER":
+    case "LOGIN":
       return {
         ...state,
         user: action.payload
       };
-    case "SET_POSTS":
+    case "LOGOUT":
+      return {
+        ...state,
+        user: action.payload
+      };
+    case "SET_ITEMS":
       return {
         ...state,
         posts: action.payload
       };
-    case "ADD_POST":
+    case "SET_STATS":
       return {
         ...state,
-        posts: state.posts.concat(action.payload)
-      };
-    case "REMOVE_POST":
-      return {
-        ...state,
-        posts: state.posts.filter(post => post.id !== action.payload)
+        stats: action.payload
       };
     case "SET_ERROR":
       return {

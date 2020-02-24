@@ -1,0 +1,802 @@
+[
+    {
+      "Word": "the",
+      "Parts of speech": "Article",
+      "OEC rank": "1",
+      "COCA rank[8]": "1",
+      "Dolch level": "Pre-primer",
+      "Polysemy": 12
+    },
+    {
+      "Word": "be",
+      "Parts of speech": "Verb",
+      "OEC rank": "2",
+      "COCA rank[8]": "2",
+      "Dolch level": "primer",
+      "Polysemy": 21
+    },
+    {
+      "Word": "to",
+      "Parts of speech": "Preposition",
+      "OEC rank": "3",
+      "COCA rank[8]": "7, 9",
+      "Dolch level": "Pre-primer",
+      "Polysemy": 17
+    },
+    {
+      "Word": "of",
+      "Parts of speech": "Preposition",
+      "OEC rank": "4",
+      "COCA rank[8]": "4",
+      "Dolch level": "Grade 1",
+      "Polysemy": 12
+    },
+    {
+      "Word": "and",
+      "Parts of speech": "Conjunction",
+      "OEC rank": "5",
+      "COCA rank[8]": "3",
+      "Dolch level": "Pre-primer",
+      "Polysemy": 16
+    },
+    {
+      "Word": "a",
+      "Parts of speech": "Article",
+      "OEC rank": "6",
+      "COCA rank[8]": "5",
+      "Dolch level": "Pre-primer",
+      "Polysemy": 20
+    },
+    {
+      "Word": "in",
+      "Parts of speech": "Preposition",
+      "OEC rank": "7",
+      "COCA rank[8]": "6, 128, 3038",
+      "Dolch level": "Pre-primer",
+      "Polysemy": 23
+    },
+    {
+      "Word": "that",
+      "Parts of speech": "Conjunction et al.",
+      "OEC rank": "8",
+      "COCA rank[8]": "12, 27, 903",
+      "Dolch level": "primer",
+      "Polysemy": 17
+    },
+    {
+      "Word": "have",
+      "Parts of speech": "Verb",
+      "OEC rank": "9",
+      "COCA rank[8]": "8",
+      "Dolch level": "primer",
+      "Polysemy": 25
+    },
+    {
+      "Word": "I",
+      "Parts of speech": "Pronoun",
+      "OEC rank": "10",
+      "COCA rank[8]": "11",
+      "Dolch level": "Pre-primer",
+      "Polysemy": 7
+    },
+    {
+      "Word": "it",
+      "Parts of speech": "Pronoun",
+      "OEC rank": "11",
+      "COCA rank[8]": "10",
+      "Dolch level": "Pre-primer",
+      "Polysemy": 18
+    },
+    {
+      "Word": "for",
+      "Parts of speech": "Preposition",
+      "OEC rank": "12",
+      "COCA rank[8]": "13, 2339",
+      "Dolch level": "Pre-primer",
+      "Polysemy": 19
+    },
+    {
+      "Word": "not",
+      "Parts of speech": "Adverb et al.",
+      "OEC rank": "13",
+      "COCA rank[8]": "28, 2929",
+      "Dolch level": "Pre-primer",
+      "Polysemy": 5
+    },
+    {
+      "Word": "on",
+      "Parts of speech": "Preposition",
+      "OEC rank": "14",
+      "COCA rank[8]": "17, 155",
+      "Dolch level": "primer",
+      "Polysemy": 43
+    },
+    {
+      "Word": "with",
+      "Parts of speech": "Preposition",
+      "OEC rank": "15",
+      "COCA rank[8]": "16",
+      "Dolch level": "primer",
+      "Polysemy": 11
+    },
+    {
+      "Word": "he",
+      "Parts of speech": "Pronoun",
+      "OEC rank": "16",
+      "COCA rank[8]": "15",
+      "Dolch level": "primer",
+      "Polysemy": 7
+    },
+    {
+      "Word": "as",
+      "Parts of speech": "Adverb, conjunction, et al.",
+      "OEC rank": "17",
+      "COCA rank[8]": "33, 49, 129",
+      "Dolch level": "Grade 1",
+      "Polysemy": 17
+    },
+    {
+      "Word": "you",
+      "Parts of speech": "Pronoun",
+      "OEC rank": "18",
+      "COCA rank[8]": "14",
+      "Dolch level": "Pre-primer",
+      "Polysemy": 9
+    },
+    {
+      "Word": "do",
+      "Parts of speech": "Verb, noun",
+      "OEC rank": "19",
+      "COCA rank[8]": "18",
+      "Dolch level": "primer",
+      "Polysemy": 38
+    },
+    {
+      "Word": "at",
+      "Parts of speech": "Preposition",
+      "OEC rank": "20",
+      "COCA rank[8]": "22",
+      "Dolch level": "primer",
+      "Polysemy": 14
+    },
+    {
+      "Word": "this",
+      "Parts of speech": "Determiner, adverb, noun",
+      "OEC rank": "21",
+      "COCA rank[8]": "20, 4665",
+      "Dolch level": "primer",
+      "Polysemy": 9
+    },
+    {
+      "Word": "but",
+      "Parts of speech": "Preposition, adverb, conjunction",
+      "OEC rank": "22",
+      "COCA rank[8]": "23, 1715",
+      "Dolch level": "primer",
+      "Polysemy": 17
+    },
+    {
+      "Word": "his",
+      "Parts of speech": "Possessive pronoun",
+      "OEC rank": "23",
+      "COCA rank[8]": "25, 1887",
+      "Dolch level": "Grade 1",
+      "Polysemy": 6
+    },
+    {
+      "Word": "by",
+      "Parts of speech": "Preposition",
+      "OEC rank": "24",
+      "COCA rank[8]": "30, 1190",
+      "Dolch level": "Grade 1",
+      "Polysemy": 19
+    },
+    {
+      "Word": "from",
+      "Parts of speech": "Preposition",
+      "OEC rank": "25",
+      "COCA rank[8]": "26",
+      "Dolch level": "Grade 1",
+      "Polysemy": 4
+    },
+    {
+      "Word": "they",
+      "Parts of speech": "Pronoun",
+      "OEC rank": "26",
+      "COCA rank[8]": "21",
+      "Dolch level": "primer",
+      "Polysemy": 6
+    },
+    {
+      "Word": "we",
+      "Parts of speech": "Pronoun",
+      "OEC rank": "27",
+      "COCA rank[8]": "24",
+      "Dolch level": "Pre-primer",
+      "Polysemy": 6
+    },
+    {
+      "Word": "say",
+      "Parts of speech": "Verb et al.",
+      "OEC rank": "28",
+      "COCA rank[8]": "19",
+      "Dolch level": "primer",
+      "Polysemy": 17
+    },
+    {
+      "Word": "her",
+      "Parts of speech": "Possessive pronoun",
+      "OEC rank": "29, 106",
+      "COCA rank[8]": "42",
+      "Dolch level": "Grade 1",
+      "Polysemy": 3
+    },
+    {
+      "Word": "she",
+      "Parts of speech": "Pronoun",
+      "OEC rank": "30",
+      "COCA rank[8]": "31",
+      "Dolch level": "primer",
+      "Polysemy": 7
+    },
+    {
+      "Word": "or",
+      "Parts of speech": "Conjunction",
+      "OEC rank": "31",
+      "COCA rank[8]": "32",
+      "Dolch level": "Grade 2",
+      "Polysemy": 11
+    },
+    {
+      "Word": "an",
+      "Parts of speech": "Article",
+      "OEC rank": "32",
+      "COCA rank[8]": "(a)",
+      "Dolch level": "Grade 1",
+      "Polysemy": 6
+    },
+    {
+      "Word": "will",
+      "Parts of speech": "Verb, noun",
+      "OEC rank": "33",
+      "COCA rank[8]": "48, 1506",
+      "Dolch level": "primer",
+      "Polysemy": 16
+    },
+    {
+      "Word": "my",
+      "Parts of speech": "Possessive pronoun",
+      "OEC rank": "34",
+      "COCA rank[8]": "44",
+      "Dolch level": "Pre-primer",
+      "Polysemy": 5
+    },
+    {
+      "Word": "one",
+      "Parts of speech": "Noun, adjective, et al.",
+      "OEC rank": "35",
+      "COCA rank[8]": "51, 104, 839",
+      "Dolch level": "Pre-primer",
+      "Polysemy": 24
+    },
+    {
+      "Word": "all",
+      "Parts of speech": "Adjective",
+      "OEC rank": "36",
+      "COCA rank[8]": "43, 222",
+      "Dolch level": "primer",
+      "Polysemy": 15
+    },
+    {
+      "Word": "would",
+      "Parts of speech": "Verb",
+      "OEC rank": "37",
+      "COCA rank[8]": "41",
+      "Dolch level": "Grade 2",
+      "Polysemy": 13
+    },
+    {
+      "Word": "there",
+      "Parts of speech": "Adverb, pronoun, et al.",
+      "OEC rank": "38",
+      "COCA rank[8]": "53, 116",
+      "Dolch level": "primer",
+      "Polysemy": 14
+    },
+    {
+      "Word": "their",
+      "Parts of speech": "Possessive pronoun",
+      "OEC rank": "39",
+      "COCA rank[8]": "36",
+      "Dolch level": "Grade 2",
+      "Polysemy": 2
+    },
+    {
+      "Word": "what",
+      "Parts of speech": "Pronoun, adverb, et al.",
+      "OEC rank": "40",
+      "COCA rank[8]": "34",
+      "Dolch level": "primer",
+      "Polysemy": 19
+    },
+    {
+      "Word": "so",
+      "Parts of speech": "Conjunction, adverb, et al.",
+      "OEC rank": "41",
+      "COCA rank[8]": "55, 196",
+      "Dolch level": "primer",
+      "Polysemy": 18
+    },
+    {
+      "Word": "up",
+      "Parts of speech": "Adverb, preposition, et al.",
+      "OEC rank": "42",
+      "COCA rank[8]": "50, 456",
+      "Dolch level": "Pre-primer",
+      "Polysemy": 50
+    },
+    {
+      "Word": "out",
+      "Parts of speech": "Preposition",
+      "OEC rank": "43",
+      "COCA rank[8]": "64, 149",
+      "Dolch level": "primer",
+      "Polysemy": 38
+    },
+    {
+      "Word": "if",
+      "Parts of speech": "Conjunction",
+      "OEC rank": "44",
+      "COCA rank[8]": "40",
+      "Dolch level": "Grade 3",
+      "Polysemy": 9
+    },
+    {
+      "Word": "about",
+      "Parts of speech": "Preposition, adverb, et al.",
+      "OEC rank": "45",
+      "COCA rank[8]": "46, 179",
+      "Dolch level": "Grade 3",
+      "Polysemy": 18
+    },
+    {
+      "Word": "who",
+      "Parts of speech": "Pronoun, noun",
+      "OEC rank": "46",
+      "COCA rank[8]": "38",
+      "Dolch level": "primer",
+      "Polysemy": 5
+    },
+    {
+      "Word": "get",
+      "Parts of speech": "Verb",
+      "OEC rank": "47",
+      "COCA rank[8]": "39",
+      "Dolch level": "primer",
+      "Polysemy": 37
+    },
+    {
+      "Word": "which",
+      "Parts of speech": "Pronoun",
+      "OEC rank": "48",
+      "COCA rank[8]": "58",
+      "Dolch level": "Grade 2",
+      "Polysemy": 7
+    },
+    {
+      "Word": "go",
+      "Parts of speech": "Verb, noun",
+      "OEC rank": "49",
+      "COCA rank[8]": "35",
+      "Dolch level": "Pre-primer",
+      "Polysemy": 54
+    },
+    {
+      "Word": "me",
+      "Parts of speech": "Pronoun",
+      "OEC rank": "50",
+      "COCA rank[8]": "61",
+      "Dolch level": "Pre-primer",
+      "Polysemy": 10
+    },
+    {
+      "Word": "when",
+      "Parts of speech": "Adverb",
+      "OEC rank": "51",
+      "COCA rank[8]": "57, 136",
+      "Dolch level": "Grade 1",
+      "Polysemy": 11
+    },
+    {
+      "Word": "make",
+      "Parts of speech": "Verb, noun",
+      "OEC rank": "52",
+      "COCA rank[8]": "45",
+      "Dolch level": "",
+      "Polysemy": 48
+    },
+    {
+      "Word": "can",
+      "Parts of speech": "Verb, noun",
+      "OEC rank": "53",
+      "COCA rank[8]": "37, 2973",
+      "Dolch level": "",
+      "Polysemy": 18
+    },
+    {
+      "Word": "like",
+      "Parts of speech": "Preposition, verb",
+      "OEC rank": "54",
+      "COCA rank[8]": "74, 208, 1123, 1684, 2702",
+      "Dolch level": "",
+      "Polysemy": 26
+    },
+    {
+      "Word": "time",
+      "Parts of speech": "noun",
+      "OEC rank": "55",
+      "COCA rank[8]": "52",
+      "Dolch level": "",
+      "Polysemy": 14
+    },
+    {
+      "Word": "no",
+      "Parts of speech": "Determiner, Adverb",
+      "OEC rank": "56",
+      "COCA rank[8]": "93, 699, 916, 1111, 4555",
+      "Dolch level": "",
+      "Polysemy": 10
+    },
+    {
+      "Word": "just",
+      "Parts of speech": "Adjective",
+      "OEC rank": "57",
+      "COCA rank[8]": "66, 1823",
+      "Dolch level": "",
+      "Polysemy": 14
+    },
+    {
+      "Word": "him",
+      "Parts of speech": "Pronoun",
+      "OEC rank": "58",
+      "COCA rank[8]": "68",
+      "Dolch level": "",
+      "Polysemy": 5
+    },
+    {
+      "Word": "know",
+      "Parts of speech": "Verb, noun",
+      "OEC rank": "59",
+      "COCA rank[8]": "47",
+      "Dolch level": "",
+      "Polysemy": 13
+    },
+    {
+      "Word": "take",
+      "Parts of speech": "Verb, noun",
+      "OEC rank": "60",
+      "COCA rank[8]": "63",
+      "Dolch level": "",
+      "Polysemy": 66
+    },
+    {
+      "Word": "people",
+      "Parts of speech": "Noun",
+      "OEC rank": "61",
+      "COCA rank[8]": "62",
+      "Dolch level": "",
+      "Polysemy": 9
+    },
+    {
+      "Word": "into",
+      "Parts of speech": "preposition",
+      "OEC rank": "62",
+      "COCA rank[8]": "65",
+      "Dolch level": "",
+      "Polysemy": 10
+    },
+    {
+      "Word": "year",
+      "Parts of speech": "Noun",
+      "OEC rank": "63",
+      "COCA rank[8]": "54",
+      "Dolch level": "",
+      "Polysemy": 7
+    },
+    {
+      "Word": "your",
+      "Parts of speech": "Possessive pronoun",
+      "OEC rank": "64",
+      "COCA rank[8]": "69",
+      "Dolch level": "",
+      "Polysemy": 4
+    },
+    {
+      "Word": "good",
+      "Parts of speech": "Adjective",
+      "OEC rank": "65",
+      "COCA rank[8]": "110, 2280",
+      "Dolch level": "",
+      "Polysemy": 32
+    },
+    {
+      "Word": "some",
+      "Parts of speech": "Determiner, pronoun",
+      "OEC rank": "66",
+      "COCA rank[8]": "60",
+      "Dolch level": "",
+      "Polysemy": 10
+    },
+    {
+      "Word": "could",
+      "Parts of speech": "Verb",
+      "OEC rank": "67",
+      "COCA rank[8]": "71",
+      "Dolch level": "",
+      "Polysemy": 6
+    },
+    {
+      "Word": "them",
+      "Parts of speech": "pronoun",
+      "OEC rank": "68",
+      "COCA rank[8]": "59",
+      "Dolch level": "",
+      "Polysemy": 3
+    },
+    {
+      "Word": "see",
+      "Parts of speech": "Verb",
+      "OEC rank": "69",
+      "COCA rank[8]": "67",
+      "Dolch level": "",
+      "Polysemy": 25
+    },
+    {
+      "Word": "other",
+      "Parts of speech": "adjective, pronoun",
+      "OEC rank": "70",
+      "COCA rank[8]": "75, 715, 2355",
+      "Dolch level": "",
+      "Polysemy": 12
+    },
+    {
+      "Word": "than",
+      "Parts of speech": "conjunction, preposition",
+      "OEC rank": "71",
+      "COCA rank[8]": "73, 712",
+      "Dolch level": "",
+      "Polysemy": 4
+    },
+    {
+      "Word": "then",
+      "Parts of speech": "adverb",
+      "OEC rank": "72",
+      "COCA rank[8]": "77",
+      "Dolch level": "",
+      "Polysemy": 10
+    },
+    {
+      "Word": "now",
+      "Parts of speech": "preposition",
+      "OEC rank": "73",
+      "COCA rank[8]": "72, 1906",
+      "Dolch level": "",
+      "Polysemy": 13
+    },
+    {
+      "Word": "look",
+      "Parts of speech": "Verb",
+      "OEC rank": "74",
+      "COCA rank[8]": "85, 604",
+      "Dolch level": "",
+      "Polysemy": 17
+    },
+    {
+      "Word": "only",
+      "Parts of speech": "adverb",
+      "OEC rank": "75",
+      "COCA rank[8]": "101, 329",
+      "Dolch level": "",
+      "Polysemy": 11
+    },
+    {
+      "Word": "come",
+      "Parts of speech": "Verb",
+      "OEC rank": "76",
+      "COCA rank[8]": "70",
+      "Dolch level": "",
+      "Polysemy": 20
+    },
+    {
+      "Word": "its",
+      "Parts of speech": "Possessive pronoun",
+      "OEC rank": "77",
+      "COCA rank[8]": "78",
+      "Dolch level": "",
+      "Polysemy": 2
+    },
+    {
+      "Word": "over",
+      "Parts of speech": "Preposition",
+      "OEC rank": "78",
+      "COCA rank[8]": "124, 182",
+      "Dolch level": "",
+      "Polysemy": 19
+    },
+    {
+      "Word": "think",
+      "Parts of speech": "verb",
+      "OEC rank": "79",
+      "COCA rank[8]": "56",
+      "Dolch level": "",
+      "Polysemy": 10
+    },
+    {
+      "Word": "also",
+      "Parts of speech": "adverb",
+      "OEC rank": "80",
+      "COCA rank[8]": "87",
+      "Dolch level": "",
+      "Polysemy": 2
+    },
+    {
+      "Word": "back",
+      "Parts of speech": "noun, adverb",
+      "OEC rank": "81",
+      "COCA rank[8]": "108, 323, 1877",
+      "Dolch level": "",
+      "Polysemy": 36
+    },
+    {
+      "Word": "after",
+      "Parts of speech": "Preposition",
+      "OEC rank": "82",
+      "COCA rank[8]": "120, 260",
+      "Dolch level": "",
+      "Polysemy": 14
+    },
+    {
+      "Word": "use",
+      "Parts of speech": "Verb, noun",
+      "OEC rank": "83",
+      "COCA rank[8]": "92, 429",
+      "Dolch level": "",
+      "Polysemy": 17
+    },
+    {
+      "Word": "two",
+      "Parts of speech": "noun",
+      "OEC rank": "84",
+      "COCA rank[8]": "80",
+      "Dolch level": "",
+      "Polysemy": 6
+    },
+    {
+      "Word": "how",
+      "Parts of speech": "adverb",
+      "OEC rank": "85",
+      "COCA rank[8]": "76",
+      "Dolch level": "",
+      "Polysemy": 11
+    },
+    {
+      "Word": "our",
+      "Parts of speech": "Possessive pronoun",
+      "OEC rank": "86",
+      "COCA rank[8]": "79",
+      "Dolch level": "",
+      "Polysemy": 3
+    },
+    {
+      "Word": "work",
+      "Parts of speech": "Verb, noun",
+      "OEC rank": "87",
+      "COCA rank[8]": "117, 199",
+      "Dolch level": "",
+      "Polysemy": 28
+    },
+    {
+      "Word": "first",
+      "Parts of speech": "adjective",
+      "OEC rank": "88",
+      "COCA rank[8]": "86, 2064",
+      "Dolch level": "",
+      "Polysemy": 10
+    },
+    {
+      "Word": "well",
+      "Parts of speech": "Adverb",
+      "OEC rank": "89",
+      "COCA rank[8]": "100, 644",
+      "Dolch level": "",
+      "Polysemy": 30
+    },
+    {
+      "Word": "way",
+      "Parts of speech": "noun, adverb",
+      "OEC rank": "90",
+      "COCA rank[8]": "84, 4090",
+      "Dolch level": "",
+      "Polysemy": 16
+    },
+    {
+      "Word": "even",
+      "Parts of speech": "adjective",
+      "OEC rank": "91",
+      "COCA rank[8]": "107, 484",
+      "Dolch level": "",
+      "Polysemy": 23
+    },
+    {
+      "Word": "new",
+      "Parts of speech": "Adjective et al.",
+      "OEC rank": "92",
+      "COCA rank[8]": "88",
+      "Dolch level": "",
+      "Polysemy": 18
+    },
+    {
+      "Word": "want",
+      "Parts of speech": "verb",
+      "OEC rank": "93",
+      "COCA rank[8]": "83",
+      "Dolch level": "",
+      "Polysemy": 10
+    },
+    {
+      "Word": "because",
+      "Parts of speech": "conjunction",
+      "OEC rank": "94",
+      "COCA rank[8]": "89, 509",
+      "Dolch level": "",
+      "Polysemy": 7
+    },
+    {
+      "Word": "any",
+      "Parts of speech": "pronoun",
+      "OEC rank": "95",
+      "COCA rank[8]": "109, 4720",
+      "Dolch level": "",
+      "Polysemy": 4
+    },
+    {
+      "Word": "these",
+      "Parts of speech": "pronoun",
+      "OEC rank": "96",
+      "COCA rank[8]": "82",
+      "Dolch level": "",
+      "Polysemy": 2
+    },
+    {
+      "Word": "give",
+      "Parts of speech": "Verb",
+      "OEC rank": "97",
+      "COCA rank[8]": "98",
+      "Dolch level": "",
+      "Polysemy": 19
+    },
+    {
+      "Word": "day",
+      "Parts of speech": "noun",
+      "OEC rank": "98",
+      "COCA rank[8]": "90",
+      "Dolch level": "",
+      "Polysemy": 9
+    },
+    {
+      "Word": "most",
+      "Parts of speech": "adverb",
+      "OEC rank": "99",
+      "COCA rank[8]": "144, 187",
+      "Dolch level": "",
+      "Polysemy": 12
+    },
+    {
+      "Word": "us",
+      "Parts of speech": "Pronoun",
+      "OEC rank": "100",
+      "COCA rank[8]": "113",
+      "Dolch level": "",
+      "Polysemy": 6
+    }
+  ]

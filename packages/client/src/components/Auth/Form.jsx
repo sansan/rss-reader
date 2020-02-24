@@ -1,5 +1,5 @@
-import React from "react";
-import { Link as RouterLink } from "react-router-dom";
+import React, { useState } from "react";
+import { Link as RouterLink, useHistory } from "react-router-dom";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -10,6 +10,8 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Icon from "@material-ui/core/Icon";
+import { useForm } from "react-hook-form";
+import { default as http } from "../../store/HttpClient";
 
 const useStyles = makeStyles(theme => ({
   paper: {
@@ -30,9 +32,84 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(3, 0, 2)
   }
 }));
+const emailRegEx = /^\S+@\S+$/;
+const baseUrl = "http://localhost:8081";
 
-export default function SignIn({ onSubmit, title }) {
+export default function SignIn({ title, role }) {
   const classes = useStyles();
+  const { register, handleSubmit, setError, clearError, errors } = useForm({
+    mode: "onBlur",
+    reValidateMode: "onBlur"
+  });
+  const [validating, setValidating] = useState(false);
+  const [checkedValues, setCheckedValues] = useState([]);
+  const [serverError, setServerError] = useState();
+  const history = useHistory();
+
+  const emailNotRegistered = async email => {
+    if (role === "signin") {
+      return true;
+    }
+    const inCache = checkedValues.find(item => item.value === email);
+    console.log(checkedValues, validating);
+    let isValid = false;
+    if (inCache) {
+      isValid = inCache.result;
+    } else {
+      const response = await http.post(
+        `${baseUrl}/v1/users/check`,
+        { email },
+        {}
+      );
+      console.log(response);
+      setCheckedValues([
+        ...checkedValues,
+        { value: email, result: response.ok }
+      ]);
+      setValidating(false);
+      console.log(response);
+      if (response && response.ok) {
+        isValid = response.ok;
+      }
+    }
+    if (isValid === false) {
+      setError(
+        "email",
+        "emailRegistered",
+        `1 Email ${email} already registered.`
+      );
+      return false;
+    } else {
+      clearError("email");
+      return true;
+    }
+  };
+
+  const apiUrl = `${baseUrl}/v1/auth/${role === "signin" ? "login" : "signup"}`;
+
+  const onSubmit = async data => {
+    setServerError(null);
+    try {
+      const { ok, user, error } = await http.post(apiUrl, data, {});
+      if (ok && ok === true && user) {
+        console.log(user);
+        history.push("/feed");
+      } else if (error) {
+        setServerError(error);
+      }
+    } catch (e) {
+      if (e.response) {
+        const { status } = e.response;
+        if (status === 403) {
+          setServerError("Wrong email/password");
+        } else if (status === 404) {
+          setServerError("User not found");
+        } else {
+          setServerError("Server Error");
+        }
+      }
+    }
+  };
 
   return (
     <Container component="main" maxWidth="xs">
@@ -44,7 +121,8 @@ export default function SignIn({ onSubmit, title }) {
         <Typography component="h1" variant="h5">
           {title}
         </Typography>
-        <form className={classes.form} noValidate onSubmit={onSubmit}>
+        {serverError && <p>{serverError}</p>}
+        <form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
           <TextField
             variant="outlined"
             margin="normal"
@@ -55,7 +133,16 @@ export default function SignIn({ onSubmit, title }) {
             name="email"
             autoComplete="email"
             autoFocus
+            inputRef={register({
+              required: "Email is required",
+              pattern: {
+                value: emailRegEx,
+                message: "Plese enter a valid email"
+              },
+              validate: async value => await emailNotRegistered(value)
+            })}
           />
+          {errors.email && <p>{errors.email.message}</p>}
           <TextField
             variant="outlined"
             margin="normal"
@@ -66,7 +153,9 @@ export default function SignIn({ onSubmit, title }) {
             type="password"
             id="password"
             autoComplete="current-password"
+            inputRef={register({ required: "password is required" })}
           />
+          {errors.password && <p>{errors.password.message}</p>}
           <Button
             type="submit"
             fullWidth
@@ -74,12 +163,20 @@ export default function SignIn({ onSubmit, title }) {
             color="primary"
             className={classes.submit}
           >
-            Sign In
+            {role === "signup" ? "Sign Up" : "Sign In"}
           </Button>
           <Grid container>
             <Grid item>
-              <Link component={RouterLink} to="/register" variant="body2">
-                {"Don't have an account? Sign Up"}
+              <Link
+                component={RouterLink}
+                to={`${role === "signup" ? "/login" : "/register"}`}
+                variant="body2"
+              >
+                {`${
+                  role === "signup"
+                    ? "Want to Log in?"
+                    : "Don't have an account? Sign Up"
+                }`}
               </Link>
             </Grid>
           </Grid>
