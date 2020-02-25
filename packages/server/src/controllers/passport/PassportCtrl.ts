@@ -19,6 +19,14 @@ export class PassportCtrl {
     return req.user;
   }
 
+  @Get("/userinfo")
+  @Authenticate()
+  @Returns(User)
+  getUserInfo(@Req() req: Req): any {
+    // FACADE
+    return req.user;
+  }
+
   @Post("/signup")
   //@Status(201)
   @Authenticate("signup")

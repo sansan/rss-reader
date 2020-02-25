@@ -1,15 +1,8 @@
 import React from "react";
-import {
-  Switch,
-  Route,
-  Redirect,
-  useHistory,
-  useLocation
-} from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import { LoginPage, RegisterPage } from "../Auth";
 import { RssListPage } from "../RssList";
-
-const isAuthenticated = true;
+import { useStore } from "../../store";
 
 const Router = () => (
   <Switch>
@@ -43,6 +36,8 @@ const NoMatch = () => {
 // A wrapper for <Route> that redirects to the login
 // screen if you're not yet authenticated.
 function PrivateRoute({ children, ...rest }) {
+  const { state } = useStore();
+  const isAuthenticated = state.user.id ? true : false;
   return (
     <Route
       {...rest}
@@ -64,8 +59,4 @@ function PrivateRoute({ children, ...rest }) {
 
 function PublicPage() {
   return <h3>Public</h3>;
-}
-
-function ProtectedPage() {
-  return <h3>Protected</h3>;
 }

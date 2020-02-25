@@ -31,7 +31,7 @@ export class SignupLocalProtocol implements OnVerify, OnInstall {
       ...user,
       password: hash
     });
-    return { ok: true, user: { id, email } };
+    return { id, email };
   }
 
   $onInstall(strategy: Strategy): void {

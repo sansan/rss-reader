@@ -38,7 +38,7 @@ const dbPath = path.join(rootDir, "../resources/database.sql");
   httpPort: process.env.PORT || 8081,
   httpsPort: false,
   mount: {
-    "/v1": [`${rootDir}/controllers/**/**Ctrl.{ts,js}`]
+    "/rest/v1": [`${rootDir}/controllers/**/**Ctrl.{ts,js}`]
   },
   componentsScan: [
     `${rootDir}/services/*{.ts,.js}`,
@@ -54,7 +54,7 @@ const dbPath = path.join(rootDir, "../resources/database.sql");
       type: "sqlite",
       database: process.env.MYSQL_DB || dbPath,
       logging: false,
-      synchronize: false,
+      synchronize: true,
       entities: [`${rootDir}/entities/*{.ts,.js}`],
       migrations: [`${rootDir}/migrations/*{.ts,.js}`],
       subscribers: [`${rootDir}/subscriber/*{.ts,.js}`]

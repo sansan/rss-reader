@@ -20,26 +20,20 @@ export class LoginLocalProtocol implements OnVerify, OnInstall {
 
   async $onVerify(@Req() request: Req, @BodyParams() credentials: Credentials) {
     const { email, password } = credentials;
-
+    console.log({ email, password });
     const user = await this.userRepository.findOne({ email });
-    $log.debug("verifying login");
+    console.log({ user });
     if (!user) {
-      $log.debug("not exist");
       throw new NotFound("User does not exist");
-      //return false;
-      // OR throw new NotAuthorized("Wrong credentials")
     }
 
     const passwordsMatch = await bcrypt.compare(password, user.password);
 
     if (!passwordsMatch) {
       throw new Forbidden("Wrong password!");
-      //return false;
-      // OR throw new NotAuthorized("Wrong credentials")
     }
-    $log.debug("ok");
 
-    return { ok: true, user };
+    return user;
   }
 
   $onInstall(strategy: Strategy): void {

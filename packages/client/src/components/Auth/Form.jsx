@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link as RouterLink, useHistory } from "react-router-dom";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
@@ -12,6 +12,7 @@ import Container from "@material-ui/core/Container";
 import Icon from "@material-ui/core/Icon";
 import { useForm } from "react-hook-form";
 import { default as http } from "../../store/HttpClient";
+import { useStore } from "../../store";
 
 const useStyles = makeStyles(theme => ({
   paper: {
@@ -33,9 +34,10 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 const emailRegEx = /^\S+@\S+$/;
-const baseUrl = "http://localhost:8081";
+const baseUrl = "/rest";
 
-export default function SignIn({ title, role }) {
+export default function Form({ title, role }) {
+  const { state, dispatch } = useStore();
   const classes = useStyles();
   const { register, handleSubmit, setError, clearError, errors } = useForm({
     mode: "onBlur",
@@ -44,7 +46,13 @@ export default function SignIn({ title, role }) {
   const [validating, setValidating] = useState(false);
   const [checkedValues, setCheckedValues] = useState([]);
   const [serverError, setServerError] = useState();
-  const history = useHistory();
+  let history = useHistory();
+  const user = state.user;
+  useEffect(() => {
+    if (user.id) {
+      history.push("/feed");
+    }
+  }, [user]);
 
   const emailNotRegistered = async email => {
     if (role === "signin") {
@@ -89,25 +97,11 @@ export default function SignIn({ title, role }) {
 
   const onSubmit = async data => {
     setServerError(null);
-    try {
-      const { ok, user, error } = await http.post(apiUrl, data, {});
-      if (ok && ok === true && user) {
-        console.log(user);
-        history.push("/feed");
-      } else if (error) {
-        setServerError(error);
-      }
-    } catch (e) {
-      if (e.response) {
-        const { status } = e.response;
-        if (status === 403) {
-          setServerError("Wrong email/password");
-        } else if (status === 404) {
-          setServerError("User not found");
-        } else {
-          setServerError("Server Error");
-        }
-      }
+
+    const user = await http.post(apiUrl, data, {});
+    if (user) {
+      dispatch({ type: "LOGIN", payload: user });
+      history.push("/feed");
     }
   };
 

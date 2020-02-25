@@ -1,16 +1,20 @@
 import { useEffect } from "react";
-//import { getUser } from "../../store/ducks/user/operations";
 import { useStore } from "../../store/store";
+import { default as HttpClient } from "../../store/HttpClient";
 
 const Initialize = ({ children }) => {
-  //const [{ user }] = useStore();
   const { state, dispatch } = useStore();
-  console.log(state);
+  const user = state.user;
+  const baseUrl = "/rest/v1";
   window.store = state;
-  const user = null;
+
   useEffect(() => {
     if (!user) {
-      //getUser(dispatch);
+      HttpClient.get(`${baseUrl}/auth/userinfo`).then(({ id, email }) => {
+        if (id) {
+          dispatch({ type: "SET_USER", payload: { id, email } });
+        }
+      });
     }
   }, []);
 
