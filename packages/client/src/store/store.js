@@ -3,7 +3,8 @@ import reducer from "./reducer";
 
 const initialState = {
   error: null,
-  user: false
+  user: false,
+  loading: false
 };
 
 const StoreContext = createContext();

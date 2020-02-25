@@ -17,9 +17,4 @@ export class UsersCtrl {
     return { ok: false, error: `User with email ${email} exists` };
   }
 
-  @Get("/")
-  @ReturnsArray(User)
-  async getList(): Promise<User[]> {
-    return this.userRepository.find();
-  }
 }

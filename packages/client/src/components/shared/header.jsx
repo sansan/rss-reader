@@ -1,5 +1,6 @@
 import React from "react";
 import { useHistory, Link } from "react-router-dom";
+import { default as HttpClient } from "../../store/HttpClient";
 import { useStore } from "../../store/store";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -26,15 +27,39 @@ const useStyles = makeStyles(theme => ({
 const Header = () => {
   const classes = useStyles();
   const history = useHistory();
-  const { state } = useStore();
-  const { user, dispatch } = state;
+  const { state, dispatch } = useStore();
+  const { user, loading } = state;
+  const { GET_USER } = loading;
+  const baseUrl = "/rest/v1";
+
+  const logoutUser = () => {
+    HttpClient.get(`${baseUrl}/auth/logout`).then(() => {
+      dispatch({ type: "LOGOUT" });
+    });
+  };
+
+  if (GET_USER) {
+    return (
+      <div className={classes.root}>
+        <AppBar position="static">
+          <Toolbar>
+            <Typography variant="h6" className={classes.title}>
+              <Link className={classes.homeLink} to="/feed">
+                RSS Reader
+              </Link>
+            </Typography>
+          </Toolbar>
+        </AppBar>
+      </div>
+    );
+  }
 
   return (
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            <Link className={classes.homeLink} to="/">
+            <Link className={classes.homeLink} to="/feed">
               RSS Reader
             </Link>
           </Typography>
@@ -58,13 +83,7 @@ const Header = () => {
               </Button>
             </>
           ) : (
-            <Button
-              color="inherit"
-              onClick={() => {
-                dispatch({ type: "LOGOUT", payload: {} });
-                history.push("/login");
-              }}
-            >
+            <Button color="inherit" onClick={logoutUser}>
               Logout
             </Button>
           )}

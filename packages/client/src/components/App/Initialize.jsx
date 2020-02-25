@@ -4,16 +4,29 @@ import { default as HttpClient } from "../../store/HttpClient";
 
 const Initialize = ({ children }) => {
   const { state, dispatch } = useStore();
-  const user = state.user;
+  const { user, loading } = state;
+  const { GET_USER } = loading;
   const baseUrl = "/rest/v1";
+  useEffect(() => {
+    console.log({ GET_USER });
+  }, [GET_USER]);
+
   window.store = state;
 
   useEffect(() => {
-    if (!user) {
+    if (!user && !GET_USER) {
+      dispatch({
+        type: "SET_LOADING",
+        payload: { key: "GET_USER", value: true }
+      });
       HttpClient.get(`${baseUrl}/auth/userinfo`).then(({ id, email }) => {
         if (id) {
           dispatch({ type: "SET_USER", payload: { id, email } });
         }
+        dispatch({
+          type: "SET_LOADING",
+          payload: { key: "GET_USER", value: false }
+        });
       });
     }
   }, []);

@@ -14,7 +14,7 @@ const reducer = (state, action) => {
     case "LOGOUT":
       return {
         ...state,
-        user: action.payload
+        user: false
       };
     case "SET_ITEMS":
       return {
@@ -30,6 +30,12 @@ const reducer = (state, action) => {
       return {
         ...state,
         error: action.payload
+      };
+    case "SET_LOADING":
+      const { key, value } = action.payload;
+      return {
+        ...state,
+        loading: { ...state.loading, [key]: value }
       };
     default:
       throw new Error(`Unhandled action type: ${action.type}`);
