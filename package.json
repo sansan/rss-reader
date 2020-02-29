@@ -23,7 +23,7 @@
     "start:prod": "cross-env NODE_ENV=production pm2-docker --raw processes.config.js --no-deamon",
     "docker:build": "yarn build && docker-compose build"
   },
-  "author": "",
+  "author": "Toms Veidemanis",
   "license": "ISC",
   "dependencies": {
     "lerna": "3.18.4",
