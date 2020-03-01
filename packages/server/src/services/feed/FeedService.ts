@@ -1,6 +1,4 @@
-import { Constant, Service, $log } from "@tsed/common";
-import { NotFound } from "ts-httpexceptions";
-//import { Calendar, CreateCalendar } from "../../models/Calendar";
+import { Service, $log } from "@tsed/common";
 import { MemoryStorage } from "../storage/MemoryStorage";
 import { cleanText } from "../../utils/helpers";
 const Parser = require("rss-parser");
@@ -33,7 +31,6 @@ export class FeedService {
   }
 
   /**
-   * Find a calendar by his ID.
    * @returns {Stats, FeedItem[]}
    */
   async get() {
@@ -52,7 +49,7 @@ export class FeedService {
       const string = `${cleanText(title)} ${cleanText(summary)}`;
       string
         .split(" ")
-        .filter(word => !stopWords.includes(word))
+        .filter(word => !stopWords.includes(word) && word.length > 0)
         .forEach(word => {
           if (stats.hasOwnProperty(word)) {
             stats[word].count = stats[word].count + 1;

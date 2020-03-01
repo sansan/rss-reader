@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import { LoginPage, RegisterPage } from "../Auth";
 import { RssListPage } from "../RssList";
-import { useStore } from "../../store";
+import useStoreon from 'storeon/react'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -17,11 +17,9 @@ const useStyles = makeStyles(theme => ({
 
 const Router = () => {
   const classes = useStyles();
-  const { state } = useStore();
-  const { loading } = state;
-  const { GET_USER } = loading;
+  const { loading } = useStoreon('user', 'loading');
 
-  if (GET_USER) {
+  if (loading.includes('USER_INFO')) {
     return (
       <div className={classes.root}>
         <LinearProgress />
@@ -59,8 +57,8 @@ const NoMatch = () => {
 // A wrapper for <Route> that redirects to the login
 // screen if you're not yet authenticated.
 function PrivateRoute({ children, ...rest }) {
-  const { state } = useStore();
-  const isAuthenticated = state.user && state.user.id ? true : false;
+  const { user } = useStoreon('user');
+  const isAuthenticated = user && user.id;
   return (
     <Route
       {...rest}

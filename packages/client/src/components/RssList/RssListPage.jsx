@@ -1,31 +1,18 @@
 import React, { useEffect } from "react";
 import Container from "@material-ui/core/Container";
-import { default as HttpClient } from "../../store/HttpClient";
-import { useStore } from "../../store";
+import useStoreon from 'storeon/react';
 
 const RssListPage = () => {
-  const baseUrl = "/rest/v1";
-  const { state, dispatch } = useStore();
-  const { stats, posts, loading } = state;
-  const { GET_FEED } = loading;
+  const { stats, posts, loading, dispatch } = useStoreon('stats', 'posts', 'loading');
+  const isLoading = loading.includes('FEED');
+
   useEffect(() => {
-    if (!stats || !posts) {
-      dispatch({
-        type: "SET_LOADING",
-        payload: { key: "GET_FEED", value: true }
-      });
-      HttpClient.get(`${baseUrl}/feed`).then(({ stats, items }) => {
-        dispatch({ type: "SET_STATS", payload: stats });
-        dispatch({ type: "SET_ITEMS", payload: items });
-        dispatch({
-          type: "SET_LOADING",
-          payload: { key: "GET_FEED", value: false }
-        });
-      });
+    if(!isLoading && !stats.length && !posts.length){
+      dispatch('posts/get');
     }
   }, []);
 
-  if (GET_FEED) {
+  if (isLoading) {
     return <p>loading...</p>;
   }
 

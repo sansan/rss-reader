@@ -14,6 +14,7 @@ import "@tsed/ajv";
 import "@tsed/passport";
 import "@tsed/swagger";
 import "@tsed/typeorm";
+import * as Fs from "fs";
 import * as bodyParser from "body-parser";
 import * as compress from "compression";
 import * as cookieParser from "cookie-parser";
@@ -85,7 +86,7 @@ const dbPath = path.join(rootDir, "../resources/database.sql");
       "params",
       "duration"
     ]
-  }
+  },
 })
 export class Server extends ServerLoader {
   $beforeRoutesInit(): void | Promise<any> {
