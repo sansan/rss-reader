@@ -4,7 +4,6 @@ export default store => {
     store.on('@init', () => ({ posts: [] }));
 
     store.on('posts/get', () => {
-        console.log(10)
         store.dispatch('loading/start', 'FEED');
         API.get('/feed').then(({stats, items }) => {
             store.dispatch('posts/set', items);
