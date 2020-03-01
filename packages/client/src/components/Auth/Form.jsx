@@ -51,6 +51,10 @@ export default function Form({ title, role }) {
     }
   }, [ user ]);
 
+  useEffect(() => {
+    dispatch('errors/clear');
+  },[]);
+
   const emailNotRegistered = async email => {
     if (role === "signin") {
       return true;
@@ -62,7 +66,7 @@ export default function Form({ title, role }) {
       isValid = inCache.result;
     } else {
       const response = await API.post(
-        '/v1/users/check',
+        '/users/check',
         { email },
         {}
       );
