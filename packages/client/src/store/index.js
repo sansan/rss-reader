@@ -14,5 +14,6 @@ export const store = createStore([
     posts,
     loading,
     errorState,
-    process.env.NODE_ENV !== 'production' && require('storeon/devtools/logger')
+    process.env.NODE_ENV !== 'production' && require('storeon/devtools/logger'),
+    process.env.NODE_ENV !== 'production' && require('storeon/devtools')
 ]);

@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import { LoginPage, RegisterPage } from "../Auth";
 import { RssListPage } from "../RssList";
-import useStoreon from 'storeon/react'
+import useStoreon from 'storeon/react';
 
 const useStyles = makeStyles(theme => ({
   root: {

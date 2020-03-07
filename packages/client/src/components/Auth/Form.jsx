@@ -122,7 +122,6 @@ export default function Form({ title, role }) {
             label="Email Address"
             name="email"
             autoComplete="email"
-            autoFocus
             inputRef={register({
               required: "Email is required",
               pattern: {

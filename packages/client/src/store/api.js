@@ -24,9 +24,9 @@ export default {
       })
       .then(checkStatus)
       .then(parseJSON)
-      .then(function(data) {
+      .then((data) => {
         return {ok: true, ...data}
-      }).catch(function(error) {
+      }).catch((error) => {
         return {ok: false, error}
       })
   },
@@ -43,9 +43,9 @@ export default {
       })
       .then(checkStatus)
       .then(parseJSON)
-      .then(function(data) {
+      .then((data) => {
         return {ok: true, ...data}
-      }).catch(function(error) {
+      }).catch((error) => {
         return {ok: false, error}
       })
   }
