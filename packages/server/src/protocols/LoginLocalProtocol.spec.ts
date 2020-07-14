@@ -1,18 +1,18 @@
-import { TestContext } from '@tsed/testing';
-import * as Sinon from 'sinon';
-import { User } from '../entities/User';
-import { LoginLocalProtocol } from './LoginLocalProtocol';
+import { TestContext } from "@tsed/testing";
+import * as Sinon from "sinon";
+import { User } from "../entities/User";
+import { LoginLocalProtocol } from "./LoginLocalProtocol";
 
-describe('LoginLocalProtocol', () => {
+describe("LoginLocalProtocol", () => {
   beforeEach(() => TestContext.create());
   afterEach(() => TestContext.reset());
 
-  describe('.$onVerify()', () => {
-    it('should return a user', async () => {
+  describe(".$onVerify()", () => {
+    it("should return a user", async () => {
       // GIVEN
       const request = {};
-      const email = 'email@domain.fr';
-      const password = 'password';
+      const email = "email@domain.fr";
+      const password = "password";
       const user = new User();
       user.email = email;
       user.password = password;
@@ -23,7 +23,7 @@ describe('LoginLocalProtocol', () => {
 
       const protocol: LoginLocalProtocol = await TestContext.invoke(LoginLocalProtocol, [
         {
-          provide: UserRepository,
+          provide: userRepository,
           use: userRepository
         }
       ]);
@@ -32,14 +32,14 @@ describe('LoginLocalProtocol', () => {
       const result = await protocol.$onVerify(request as any, { email, password });
 
       // THEN
-      userRepository.findOne.should.be.calledWithExactly({ email: 'email@domain.fr' });
+      userRepository.findOne.should.be.calledWithExactly({ email: "email@domain.fr" });
       result.should.deep.equal(user);
     });
-    it('should return a user', async () => {
+    it("should return a user", async () => {
       // GIVEN
       const request = {};
-      const email = 'email@domain.fr';
-      const password = 'password';
+      const email = "email@domain.fr";
+      const password = "password";
       const user = new User();
       user.email = email;
       user.password = `${password}2`;
@@ -50,7 +50,7 @@ describe('LoginLocalProtocol', () => {
 
       const protocol: LoginLocalProtocol = await TestContext.invoke(LoginLocalProtocol, [
         {
-          provide: UserRepository,
+          provide: userRepository,
           use: userRepository
         }
       ]);
@@ -59,14 +59,14 @@ describe('LoginLocalProtocol', () => {
       const result = await protocol.$onVerify(request as any, { email, password });
 
       // THEN
-      userRepository.findOne.should.be.calledWithExactly({ email: 'email@domain.fr' });
+      userRepository.findOne.should.be.calledWithExactly({ email: "email@domain.fr" });
       result.should.deep.equal(false);
     });
     it("should return a false when user isn't found", async () => {
       // GIVEN
       const request = {};
-      const email = 'email@domain.fr';
-      const password = 'password';
+      const email = "email@domain.fr";
+      const password = "password";
 
       const userRepository = {
         findOne: Sinon.stub().resolves(undefined)
@@ -74,7 +74,7 @@ describe('LoginLocalProtocol', () => {
 
       const protocol: LoginLocalProtocol = await TestContext.invoke(LoginLocalProtocol, [
         {
-          provide: UserRepository,
+          provide: userRepository,
           use: userRepository
         }
       ]);
@@ -83,7 +83,7 @@ describe('LoginLocalProtocol', () => {
       const result = await protocol.$onVerify(request as any, { email, password });
 
       // THEN
-      userRepository.findOne.should.be.calledWithExactly({ email: 'email@domain.fr' });
+      userRepository.findOne.should.be.calledWithExactly({ email: "email@domain.fr" });
       result.should.deep.equal(false);
     });
   });
